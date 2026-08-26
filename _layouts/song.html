@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="song-page">
+  <a class="back-link" href="{{ '/' | relative_url }}">← Back to countdown</a>
+  <div class="song-page__header">
+    <div>
+      <p class="eyebrow">Track {{ page.rank | prepend: "0" | slice: -2, 2 }} · {{ page.season | default: 'Summer playlist' }}</p>
+      <h1>{{ page.title }}</h1>
+      <p class="performer">{{ page.performer }}</p>
+    </div>
+    <div class="cover-placeholder cover-placeholder--large" role="img" aria-label="Placeholder for the cover of {{ page.title }} or a related image"><span>♪</span><small>Add cover image</small></div>
+  </div>
+  <div class="review-layout">
+    <div class="review-content">{{ content }}</div>
+    <aside class="rating-box"><span class="eyebrow">Your rating</span><div class="stars" aria-label="Rating placeholder">☆☆☆☆☆</div><p>Replace the stars with your rating.</p></aside>
+  </div>
+</article>

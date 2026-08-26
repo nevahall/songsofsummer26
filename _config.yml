@@ -1,0 +1,29 @@
+title: "Songs of the Summer"
+description: "A curated countdown of the top 10 songs of the summer."
+url: ""
+baseurl: ""
+lang: "en-US"
+
+collections:
+  songs:
+    output: true
+    permalink: /songs/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "songs"
+    values:
+      layout: "song"
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache
